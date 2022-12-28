@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MachineConnector", "src\MachineConnector\MachineConnector.csproj", "{EB70C5D2-23D6-4676-9D4A-CB4EF0D176D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MachineClient", "src\MachineClient\MachineClient.csproj", "{59D5FB0B-AADE-4D8D-99CA-9C5908ED7A7A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MachineConnectorTests", "tests\MachineConnectorTests\MachineConnectorTests.csproj", "{57BA6382-68DE-470F-9DB5-016BD4522BD5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EB70C5D2-23D6-4676-9D4A-CB4EF0D176D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB70C5D2-23D6-4676-9D4A-CB4EF0D176D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB70C5D2-23D6-4676-9D4A-CB4EF0D176D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB70C5D2-23D6-4676-9D4A-CB4EF0D176D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59D5FB0B-AADE-4D8D-99CA-9C5908ED7A7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59D5FB0B-AADE-4D8D-99CA-9C5908ED7A7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59D5FB0B-AADE-4D8D-99CA-9C5908ED7A7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59D5FB0B-AADE-4D8D-99CA-9C5908ED7A7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57BA6382-68DE-470F-9DB5-016BD4522BD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57BA6382-68DE-470F-9DB5-016BD4522BD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57BA6382-68DE-470F-9DB5-016BD4522BD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57BA6382-68DE-470F-9DB5-016BD4522BD5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

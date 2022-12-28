@@ -1,0 +1,47 @@
+﻿@page "/eluCloud"
+
+<PageTitle>eluCloud Maschinen</PageTitle>
+
+<h1>eluCloud Maschinen</h1>
+<p>Bitte geben Sie die Adresse der eluCloud ein.</p>
+
+<table>
+    <tr>
+        <td>
+            <label for="address" style="margin: 5px">eluCloud Adresse: </label>
+        </td>
+        <td>
+            <textarea id = "address" name = "address" rows="1" cols="100"></textarea>
+        </td>
+        <td>
+            <input type="submit" value="Verbinden" style="margin: 5px"/>
+        </td>
+    </tr>
+</table>
+
+@if (_eluCloudMachines == null)
+{
+    <p>
+        <em>Loading...</em>
+    </p>
+}
+else
+{
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Maschinen Id</th>
+            <th>Name</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var machine in _eluCloudMachines)
+        {
+            <tr>
+                <td>@machine.Id</td>
+                <td>@machine.Name</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}

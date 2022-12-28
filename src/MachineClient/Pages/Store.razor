@@ -1,0 +1,28 @@
+﻿@page "/store"
+
+<PageTitle>Lager</PageTitle>
+
+@if (_stores == null)
+{
+    <p>
+        <em>Loading...</em>
+    </p>
+}
+else
+{
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Name</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var store in _stores)
+        {
+            <tr>
+                <td>@store.Name</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}

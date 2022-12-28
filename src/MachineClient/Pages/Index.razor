@@ -1,0 +1,51 @@
+﻿@page "/"
+
+<PageTitle>SBZ 628</PageTitle>
+@if (_finishedParts == null)
+{
+    <p>
+        <em>Loading...</em>
+    </p>
+}
+else
+{
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Fertigstellung</th>
+            <th>Lager</th>
+            <th>Fach</th>
+            <th>WPK</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var finishedPart in _finishedParts)
+        {
+            <tr>
+                <td>@finishedPart.Name</td>
+                <td>@finishedPart.FinishTime</td>
+                <td>@finishedPart.Store</td>
+                <td>@finishedPart.Pin</td>
+                @if (finishedPart.FpcNeeded)
+                {
+                    <td><button>WPK</button></td>
+                }
+                else
+                {
+                    <td></td>
+                }
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+
+<div style="position: relative">
+    <div class="footer">
+        <hr/>
+        <p> Lager 1 Fach 1</p>
+        <p> Nachfolger: BAZ1, BAZ2</p>
+    </div>
+</div>
+ 

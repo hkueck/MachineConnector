@@ -1,0 +1,47 @@
+﻿@page "/rotox"
+
+<PageTitle>Rotox Maschinen</PageTitle>
+
+<h1>Rotox Maschinen</h1>
+
+<button class="btn btn-primary"
+        @onclick="OnAddMachine">
+    Maschine hinzufügen
+</button>
+
+@if (_rotoxMachines == null)
+{
+    <p>
+        <em>Loading...</em>
+    </p>
+}
+else
+{
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Maschinen Id</th>
+            <th>Name</th>
+            <th>Port</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var machine in _rotoxMachines)
+        {
+            <tr>
+                <td>@machine.Id</td>
+                <td>@machine.Name</td>
+                <td>@machine.Port</td>
+                <td><button>Löschen</button></td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+@if (ShowDialog)
+{
+    <RotoxMachineInput
+        OnClose="@OnCloseAddDialog"
+    />
+}

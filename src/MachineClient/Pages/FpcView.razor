@@ -1,0 +1,34 @@
+﻿@page "/fpc"
+
+<PageTitle>WPK</PageTitle>
+
+@if(_fpcs == null)
+{
+    <p>
+        <em>Loading...</em>
+    </p>
+}
+else
+{
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Teil</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var fpc in _fpcs)
+        {
+            <tr>
+                <td>@fpc.Name</td>
+                <td>@fpc.Type</td>
+                <td>@fpc.PartName</td>
+                <td><button>WPK</button></td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}

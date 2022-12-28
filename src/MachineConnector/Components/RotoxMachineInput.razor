@@ -1,0 +1,53 @@
+<div class="modal fade show" 
+     id="rotoxMachine" 
+     style="display:block; background-color: rgba(10,10,10,.8);" 
+     aria-modal="true"
+     role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">@_caption</h4>
+                <button type="button" class="close"
+                        @onclick="@Cancel">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>@_message</p>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <label for = "id" >Id: </label>
+                            </td>
+                            <td>
+                                <textarea id = "id" rows="1" cols="50" @bind="_id" ></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                             <td>
+                                  <label for = "name"  >Name: </label>
+                             </td>
+                             <td>
+                                <textarea id = "name" rows="1" cols="50" @bind="_name"></textarea>
+                             </td>
+                         </tr>
+                         <tr>
+                              <td>
+                                  <label for = "port" >Port: </label>
+                              </td>
+                              <td>
+                                    <textarea id = "port"  rows="1" cols="50" @bind="_port"></textarea>
+                              </td>
+                          </tr>
+                      </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary"
+                        @onclick=@Ok>Speichern
+                </button>
+                <button type="button" class="btn btn-warning"
+                        @onclick="@Cancel">Abbrechen</button>
+            </div>
+        </div>
+    </div>
+</div>
